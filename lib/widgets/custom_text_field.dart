@@ -1,28 +1,55 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  final String hintText; // Το κείμενο που θα εμφανίζεται ως οδηγία
-  final bool isPassword; // Αν το πεδίο είναι για password ή όχι
+class CustomTextField extends StatefulWidget {
+  final String hintText;
+  final bool isPassword;
+  final TextEditingController? controller;
 
   const CustomTextField({
     super.key,
     required this.hintText,
-    this.isPassword = false, // Προεπιλογή: Δεν είναι password
+    this.isPassword = false,
+    this.controller,
   });
+
+  @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  bool _obscureText = true; // Αρχική κατάσταση απόκρυψης κωδικού
+
+  @override
+  void initState() {
+    super.initState();
+    if (!widget.isPassword) {
+      _obscureText = false; // Αν δεν είναι password, μην αποκρύπτεις το κείμενο
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      obscureText: isPassword, // Αν είναι password, αποκρύπτει το κείμενο
+      controller: widget.controller,
+      obscureText: _obscureText,
       decoration: InputDecoration(
-        hintText: hintText,
+        hintText: widget.hintText,
         filled: true,
         fillColor: Colors.white,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10), // Στρογγυλεμένες γωνίες
+          borderRadius: BorderRadius.circular(10),
         ),
-        suffixIcon: isPassword
-            ? const Icon(Icons.visibility) // Εικονίδιο για password
+        suffixIcon: widget.isPassword
+            ? IconButton(
+                icon: Icon(
+                  _obscureText ? Icons.visibility : Icons.visibility_off,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _obscureText = !_obscureText;
+                  });
+                },
+              )
             : null,
       ),
     );

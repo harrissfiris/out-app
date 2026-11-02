@@ -1,52 +1,28 @@
-# Out! Application
+# Οδηγίες εγκατάστασης:
 
-**Out!** is a mobile application built with **Flutter** that helps you discover fun activities in your city and coordinate outings with your friends. Whether you're into food, nightlife, culture, or outdoor adventures, Out! brings everything together in one place to make planning easy and social.
-
-## Features
-
-- **Browse local activities** by category or location
-- **Create and manage outings** with your friends
-- **Schedule events** and track attendance
-- **Map integration** for directions and meeting spots
-- **Notifications** for upcoming plans and friend activity
-- **Social features** for inviting and chatting with friends
+Για την εγκατάσταση της εφαρμογής χρειάζεται κινητή συσκευή με λογισμικό Android. Πατήστε στο σύνδεσμο του release apk για εγκατάσταση. Στη συνέχεια θα χρειαστεί να συναινέσετε στο να κατέβει η εφαρμογή από unknown developer και ενδεχομένως να σας ζητήσει να σκανάρει την εφαρμογή, προχωρήστε χωρίς σκανάρισμα.  Η εφαρμογή θα έχει κατέβει στο κινητό σας και θα είναι έτοιμη προς χρήση.
 
 
-### Prerequisites
+# Οδηγίες χρήσης εφαρμογής:
 
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- An Android/iOS emulator or a physical device
-- A Firebase project with configuration files
+1. Ανοίξτε την εφαρμογή
+2. Αν είστε νέος χρήστης πατήστε το “Sign Up” στο κάτω μέρος της οθόνης.
+3. Προσθέστε τα στοιχεία σας και στη συνέχεια πατήστε “Sign Up”
+4. Στη σελίδα που σας εμφανίζει επιλέξτε τα ενδιαφέροντά σας και πατήστε “Ready”
+5. Διαλέξτε το avatar που επιθυμείτε
+6. Είστε έτοιμοι να ξεκινήσετε στην εφαρμογή! 
+7. Δώστε permission μέσω των pop-ups σε ό,τι σας ζητείται για σωστή χρήση της εφαρμογής
+8. Από το home page μπορείτε να βρείτε δραστηριότητες, όπως και από το search page, το οποίο μπορείτε να βρείτε στο κάτω μέρος της οθόνης πατώντας τον μεγεθυντικό φακό.
+9. Για να κανονίσετε ένα νέο πλάνο επισκεφθείτε τη σελίδα του activity που θέλετε και πατήστε το “+” στο κάτω μέρος της οθόνης. Επιλέξτε επιθυμητή μέρα και ώρα και στη συνέχεια πατήστε το “Select Group”. Υπάρχει η δυνατότητα να μη διαλέξεις κάποιον φίλο ή group.
+10. Για να δείτε τα ήδη κανονισμένα πλάνα σας και το ημερολόγιο με τις ημερομηνίες στις οποίες έχετε κάτι κανονισμένο πατήστε το ημερολόγιο
+11. Για να προσθέσετε φίλους πηγαίνετε στο προφίλ σας, πατήστε στο “My Friends” και στη συνέχεια στο “Add new friends”. Η προσθήκη φίλων γίνεται μέσω σκαναρίσματος του QR code του κάθε χρήστη και ταυτόχρονα και για τους δύο χρήστες.
+12. Στο προφίλ σας μπορείτε να βρείτε ρυθμίσεις μέσω των οποίων μπορείτε να αλλάξετε το username σας και να κάνετε log out από την εφαρμογή.
 
-### Installation
 
-```bash
-git clone https://github.com/harrissfiris/Flutter-Project-Out-App.git
-cd Flutter-Project-Out-App
-flutter pub get
-```
+Για να λειτουργήσει, η εφαρμογή απαιτεί **Android SDK 23**.  
 
-### Firebase Setup
+# Διαφοροποιήσεις σε σχέση με το πρωτότυπο της β’ φάσης:
 
-1. Create a Firebase project at [https://firebase.google.com](https://firebase.google.com)
-2. Enable **Authentication** (e.g., Email/Password or Google Sign-In)
-3. Enable **Cloud Firestore** and optionally **Firebase Messaging**
-4. Download the `google-services.json` (Android) and/or `GoogleService-Info.plist` (iOS)
-5. Place them in the correct directories:
-   - `android/app/google-services.json`
-   - `ios/Runner/GoogleService-Info.plist`
-
-### Run the app
-
-```bash
-flutter run
-```
-
-> Use `flutterfire configure` if you're using the Firebase CLI to set up your environment automatically.
-
-## Screenshots
-
-| Welcome Screen | Home Page | Login |
-|----------------|-----------|-------|
-| ![Welcome](assets/IMG_0452%202.PNG) | ![Home](assets/IMG_0454%202.PNG) | ![Login](assets/IMG_0453.PNG) |
-
+1. Δεν υλοποιήσαμε την πρόταση εναλλακτικής ώρας/μέρας για κάποιο ήδη κανονισμένο πλάνο καθώς το θεωρήσαμε περίπλοκο τόσο σε υλοποίηση όσο και σε real life συνεννόηση μεταξύ ατόμων.
+2. Έχουμε προσθέσει σελίδες για πρόσθεση μέλους στην ομάδα και για πρόσθεση συμμετεχόντων στο plan. 
+3. Μικρές αλλαγές στο interface (χρώματα, κουμπιά, εικόνες κλπ.)
