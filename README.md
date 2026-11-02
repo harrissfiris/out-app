@@ -1,8 +1,8 @@
-# Out! — Plan Outings with Friends
+# Out!
 
 Out! is a cross-platform mobile app, built with Flutter and Firebase, for discovering activities and organising outings with friends. Users pick their interests, browse activities near them, turn an activity into a plan, invite friends or a whole group, and keep track of everything on a shared calendar.
 
-Developed for the *Human–Computer Interaction* course, School of Electrical and Computer Engineering, NTUA.
+Developed for the *Human-Computer Interaction* course, School of Electrical and Computer Engineering, NTUA.
 
 | Welcome | Home | Login |
 |---|---|---|
